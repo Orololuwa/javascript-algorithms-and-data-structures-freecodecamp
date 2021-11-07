@@ -1,0 +1,9 @@
+function destroyer(arr) {
+  const argArray = Object.values(arguments).map(el => el).slice(1);
+
+  return arguments[0].filter(el => {
+    return !argArray.includes(el)
+  })
+}
+
+console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));

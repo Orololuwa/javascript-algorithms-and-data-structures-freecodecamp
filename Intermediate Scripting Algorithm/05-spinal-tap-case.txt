@@ -1,0 +1,7 @@
+function spinalCase(str) {
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  return str.split(/\s+|_+/g)
+  .map(str => str.toLowerCase()).join("-");
+}
+
+console.log(spinalCase('ThisIsSpinalCase'));

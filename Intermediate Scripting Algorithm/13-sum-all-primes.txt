@@ -1,0 +1,23 @@
+function sumPrimes(num) {
+  const A = new Array(num+1).fill(true);
+
+  for (let i=2; i<Math.sqrt(num); i++){
+    if (A[i]){
+      for (let j=i**2; j<A.length; j+=i){
+        A[j] = undefined;
+      }
+    }
+  }
+
+  let sum = 0;
+
+  for (let k=2; k<A.length; k++){
+    if (A[k]){
+      sum += k;
+    }
+  }
+
+  return sum;
+}
+
+console.log(sumPrimes(977));

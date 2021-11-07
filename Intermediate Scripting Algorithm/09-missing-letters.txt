@@ -1,0 +1,12 @@
+function fearNotLetter(str) {
+  let code;
+  for (let i=0; i<str.length; i++){
+    if (str.charCodeAt(i)+1 !== str.charCodeAt(i+1) && str.charCodeAt(i) < 122){
+      code = str.charCodeAt(i)+1;
+      return String.fromCharCode(code);
+    }
+  }
+  return undefined;
+}
+
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz"));

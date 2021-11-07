@@ -1,0 +1,12 @@
+function mutation(arr) {
+  const temp = arr[1].split("");
+  for (let i=0; i<temp.length; i++){
+    if (!(arr[0].toLowerCase().includes(temp[i].toLowerCase()))){
+      //console.log(temp[i])
+      return false
+    }
+  }
+  return true;
+}
+
+mutation(["Mary", "Army"]);

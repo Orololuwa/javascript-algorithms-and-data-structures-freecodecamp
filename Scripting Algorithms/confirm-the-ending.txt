@@ -1,0 +1,7 @@
+function confirmEnding(str, target) {
+  const start = str.length - target.length;
+  const end = str.length + 1
+  return str.substring(start, end) === target
+}
+
+confirmEnding("Bastian", "n");

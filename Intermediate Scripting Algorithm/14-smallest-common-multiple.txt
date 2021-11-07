@@ -1,0 +1,30 @@
+const gcd = (array) => {
+  let a = array[0];
+  let b = array[1];
+
+  while (a%b !== 0){
+    const temp = a;
+    a = b;
+    b = temp%b;
+  }
+
+  return b
+}
+
+const lcm = (array) => {
+  return (array[0] * array[1]) / gcd(array)
+}
+
+function smallestCommons(array) {
+  const a = array[0] > array[1] ? array[0] : array[1];
+  const b = array[1] < array[0] ? array[1] : array[0];
+
+  let c = 1;
+
+  for (let i=b; i<=a; i++){
+    c = lcm([c,i]);
+  }
+  return c
+}
+
+console.log(smallestCommons([23,18]));

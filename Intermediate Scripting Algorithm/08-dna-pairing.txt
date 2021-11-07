@@ -1,0 +1,15 @@
+function pairElement(str) {
+  const outerList = str.split("");
+  return outerList.map((el) => {
+    const innerList = [el];
+    innerList.push(
+      el === "C" ? "G" :
+      el === "G" ? "C" :
+      el === "A" ? "T" :
+       "A"
+      )
+    return innerList;
+  });
+}
+
+console.log(pairElement("TTGAG"));
