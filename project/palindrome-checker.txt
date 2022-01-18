@@ -1,0 +1,8 @@
+function palindrome(str) {
+  const formattedStr =  str.toLowerCase().replace(/[\W_]/gi, '');
+
+  const reversedStr = formattedStr.split("").reverse().join("");
+  return reversedStr === formattedStr
+}
+
+console.log(palindrome("My age is 0, 0 si ega ym."));
